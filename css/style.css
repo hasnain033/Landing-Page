@@ -1,0 +1,222 @@
+
+
+
+body{
+    background: rgb(136, 203, 171);
+    background: linear-gradient(0deg, rgba(136,203,171,1), rgba(0,13,60,1) 100%);
+    margin: 0;
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    
+}
+
+.page-header{
+    background: #fff;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+/* Typograpghy General */
+
+h1{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2em;
+    margin: 2em 1rem;
+}
+
+@media only screen and (min-width:951px){
+    h1{
+        font-size: 5em;
+    }
+
+}
+
+
+main{
+    width: 90%;
+    margin: 10vh auto 10vh auto;
+}
+
+/* @media only screen and (min-width:){
+    
+} */
+
+.main-header{
+    text-align: center;  
+}
+
+section {
+    padding: 1.5em 0;
+    position: relative;
+}
+
+.section-container{
+    text-align: left;
+}
+
+/* @media only screen and (min-width:){
+
+} */
+
+.collapse::after{
+    padding-left: 0.2em;
+    content: '\02795';
+}
+
+.active::after{
+    padding-left: 0.2em;
+    content: "\2796"!important;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-family: 'Oxygen', sans-serif;
+    color: #fff;
+    border-bottom: 1px solid #cc1;
+}
+
+p {
+    line-height: 1.6em;
+    color: #eee;
+}
+
+@media only screen and (min-width:951px){
+    p{
+        font-size: 1.5em;
+    }
+    h2{
+        font-size: 2em;
+    }
+
+}
+
+.navbar_menu ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media only screen and (min-width:501px){
+    .navbar_menu ul{
+        text-align: right;
+        padding-right: 1em;
+    }
+}
+
+.navbar_menu li{
+    display: inline-block;
+}
+
+.navbar_menu a{
+    font-family: sans-serif;
+    padding: 0.5em;
+    color: #000;
+    display: block;  
+    line-height: 2;
+     
+}
+
+.navbar_menu a:hover{
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+
+}
+
+section:nth-of-type(even) .section-container h2{
+    margin-right: 0;
+    text-align: right;
+    margin-left: auto;
+}
+
+@media only screen and (min-width:1101px){
+    section:nth-of-type(even) .section-container{
+        padding-left: 20em;
+    }
+    section:nth-of-type(odd) .section-container{
+        padding-right: 20em;
+    }
+
+}
+
+section:nth-of-type(odd) .section-container::before{
+    content: '';
+    background: rgb(130, 141, 161);
+    position: absolute;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 1;
+    transition: 0.5s ease all;
+}
+
+section:nth-of-type(even) .section-container::before{
+    content: '';
+    background: rgba(159, 164, 175, 0.6);
+    position: absolute;
+    top:3em;
+    right: 3em;
+    z-index: -5;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    opacity: 1;
+    transition: 0.5 ease all;
+}
+
+section:nth-of-type(3n) .section-container::after{
+    content: '';
+    background: rgba(143, 153, 179, 0.6);
+    position: absolute;
+    z-index: -5;
+    border-radius: 50%;
+    width: 5vh;
+    height: 5vh;
+    opacity: 1;
+    transition: .5s ease all;
+}
+
+section.your-active-section .section-container::before{
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards;
+}
+
+section.your-active-section .section-container::after{
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards;
+}
+
+
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg)
+                   translate(-1em)
+                   
+    }
+
+    to{
+        transform: rotate(360deg)
+                   translate(-1em)
+                   
+    }
+}
+
+.scroll-btn{
+    background-color:rgb(110, 157, 193);
+    border: none;
+    display: inline-block;
+    padding: .5em .8em;
+    border-radius: 10%;
+    
+}
+
+
+
+
+
+
